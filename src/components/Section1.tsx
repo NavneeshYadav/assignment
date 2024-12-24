@@ -14,9 +14,12 @@ const Section1 = () => {
                 <p className="text-sm mt-3 mb-5 text-center">
                     Unlimited video | No credit card needed
                 </p>
-                <video className="rounded-3xl">
+                {/* <video className="rounded-3xl">
                     <source src="https://res.cloudinary.com/diqmvbeg6/video/upload/v1727308210/06-HOME-hero_nyz3a8.mp4" type="video/mp4" />
-                </video>
+                </video> */}
+                <div className="rounded-3xl min-h-96 mx-16 bg-black">
+
+                </div>
 
                 <div className="text-center flex flex-row gap-2 justify-center mt-3">
                     <p>

@@ -11,17 +11,19 @@ import { FaArrowRight } from "react-icons/fa";
 const Section2 = () => {
     return (
         <section>
-            <div className="mt-20 text-center ">
-                <h2 className="text-5xl  weight-400 mb-5">Video for content creators like you.</h2>
+            <div className="mt-20 text-left mx-8 sm:text-center ">
+                <h2 className="text-5xl weight-400 mb-5">Video for content creators like you.</h2>
                 <p className="text-lg">
-                    Whatever you do, whoever you work with — here’s how HeyGen can help.
+                    Whatever you do, whoever you work with — here's how HeyGen can help.
                 </p>
             </div>
             <div className="flex flex-col lg:flex-row  justify-center align-center mt-16 gap-10">
 
-                <video className="w-4/12 border rounded-xl max-h-96" src="https://res.cloudinary.com/diqmvbeg6/video/upload/q_auto/v1727421678/WebFlow/zscnxyrjlqtmial5j3kr.mp4"></video>
+                {/* <video className="w-4/12 border rounded-xl max-h-96" src="https://res.cloudinary.com/diqmvbeg6/video/upload/q_auto/v1727421678/WebFlow/zscnxyrjlqtmial5j3kr.mp4"></video> */}
+<div className="w-[450px] border rounded-xl mx-4 h-[250px] bg-black">
 
-                <div>
+</div>
+                <div className="mx-7 lg:h-[250px]">
                     <Accordion className="w-96" type="single" collapsible>
                         <AccordionItem value="item-1" >
                             <AccordionTrigger>Marketing</AccordionTrigger>
