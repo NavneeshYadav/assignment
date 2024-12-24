@@ -9,7 +9,7 @@ const Section2 = () => {
                 <div className="text-left flex flex-col justify-center item mx-10 mt-8 lg:w-96">
                     <h2 className="text-6xl mx-4">Meet your new spokesperson.</h2>
                     <div className="mt-4 mx-4">
-                        It’s you. Well, an AI version of you that speaks 175 languages, moves naturally, and always follows the script. Create your own avatar with just a webcam, or use one of our avatars. Change voice, clothes, or background with a click.
+                        It's you. Well, an AI version of you that speaks 175 languages, moves naturally, and always follows the script. Create your own avatar with just a webcam, or use one of our avatars. Change voice, clothes, or background with a click.
                     </div>
                     <div className="mt-4 mx-4">
                         <button className="text-white bg-black border px-3 py-2 rounded-3xl lg:block lg:min-w-full hover:bg-fuchsia-600">Sign up for free</button>
