@@ -1,6 +1,10 @@
 "use client";
 
-// import InfiniteIconCarousel from "./InfiniteIconCarousel";
+import { InfiniteSlider } from "./InfiniteSlider";
+
+
+
+
 
 const Section1 = () => {
     return (
@@ -23,15 +27,16 @@ const Section1 = () => {
 
                 <div className="text-center flex flex-row gap-2 justify-center mt-3">
                     <p>
-                        Trusted by over 45,000 customers 
+                        Trusted by over 45,000 customers
                     </p>
-                    | 
+                    |
                     <img className="size-6" src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be/66f199f848e447ac8da0de24_Frame.webp" alt="" />
                     <p>
-                    Rated 4.8/5 on G2
+                        Rated 4.8/5 on G2
                     </p>
                 </div>
-                {/* <InfiniteIconCarousel /> */}
+                {/* <InfiniteSlider /> */}
+
             </div>
         </section>
     )

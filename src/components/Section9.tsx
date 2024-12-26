@@ -8,11 +8,11 @@ const Section9 = () => {
             <div className="mt-28">
                 <h1 className="mb-28 text-center font-medium text-5xl">Made With HeyGen</h1>
                 <div className="flex lg:flex-row justify-center gap-10 mt-4">
-                    <div >
-                        <div>
-                            <img className="w-96 h-48 hover:overflow-hidden transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" src="https://cdn.prod.website-files.com/66fe8021b25e3d52866115cd/6712df1a1e54c63506e9466e_Olgivy%20Feature%20Image-p-2000.png" alt="image1" />
-                        </div>
-                        <div className="bg-gray-200 w-96 h-56">
+                    <div className="">
+
+                        <img className="w-96 h-48 rounded-t-xl" src="https://cdn.prod.website-files.com/66fe8021b25e3d52866115cd/6712df1a1e54c63506e9466e_Olgivy%20Feature%20Image-p-2000.png" alt="image1" />
+
+                        <div className="bg-gray-200 w-96 h-56 rounded-b-xl">
                             <div className="pt-7 text-center">
                                 <span className="text-black bg-white mx-1 p-2 rounded-2xl">Agency</span>
                                 <span className="text-black bg-white mx-1 p-2 rounded-2xl">Personalized Video</span>
@@ -26,8 +26,8 @@ const Section9 = () => {
                         </div>
                     </div>
                     <div>
-                        <img className="w-96 h-48" src="https://cdn.prod.website-files.com/66fe8021b25e3d52866115cd/6712df1a1e54c63506e9466e_Olgivy%20Feature%20Image-p-2000.png" alt="image1" />
-                        <div className="bg-gray-200 w-96 h-56">
+                        <img className="w-96 h-48 rounded-t-xl" src="https://cdn.prod.website-files.com/66fe8021b25e3d52866115cd/6712df1a1e54c63506e9466e_Olgivy%20Feature%20Image-p-2000.png" alt="image1" />
+                        <div className="bg-gray-200 w-96 h-56 rounded-b-xl">
                             <div className="pt-7 text-center">
                                 <span className="text-black bg-white mx-1 p-2 rounded-2xl">Agency</span>
                                 <span className="text-black bg-white mx-1 p-2 rounded-2xl">Personalized Video</span>
@@ -43,8 +43,8 @@ const Section9 = () => {
                         </div>
                     </div>
                     <div>
-                        <img className="w-96 h-48" src="https://cdn.prod.website-files.com/66fe8021b25e3d52866115cd/6712df1a1e54c63506e9466e_Olgivy%20Feature%20Image-p-2000.png" alt="image1" />
-                        <div className="bg-gray-200 w-96 h-56">
+                        <img className="w-96 h-48 rounded-t-xl" src="https://cdn.prod.website-files.com/66fe8021b25e3d52866115cd/6712df1a1e54c63506e9466e_Olgivy%20Feature%20Image-p-2000.png" alt="image1" />
+                        <div className="bg-gray-200 w-96 h-56 rounded-b-xl">
                             <div className="pt-7 text-center">
                                 <span className="text-black bg-white mx-1 p-2 rounded-2xl">Agency</span>
                                 <span className="text-black bg-white mx-1 p-2 rounded-2xl">Personalized Video</span>
@@ -55,10 +55,11 @@ const Section9 = () => {
                             <button className="bg-black ml-4 text-white p-2 rounded-full hover:bg-fuchsia-600">
                                 <IoIosArrowForward />
                             </button>
-
-
                         </div>
                     </div>
+                </div>
+                <div className="w-56 text-center mt-10 lg:mx-auto">
+                    <button className="text-white bg-black border px-4 py-2 rounded-3xl hover:bg-fuchsia-600">View all customer stories</button>
                 </div>
             </div>
 
