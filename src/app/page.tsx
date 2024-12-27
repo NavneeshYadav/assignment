@@ -12,6 +12,7 @@ import Section10 from "@/components/Section10";
 import Image from "next/image";
 import { InfiniteSlider } from "@/components/InfiniteSlider";
 import InfiniteCarousel from "@/components/InfiniteCarousel";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -26,10 +27,11 @@ export default function Home() {
         <Section5 />
         <Section6 />
         <Section7 />
-        {/* <Section8/> */}
+        <Section8/>
         <Section9 />
         <Section10 />
-        <InfiniteCarousel/>
+        <InfiniteCarousel />
+        <Footer />
       </main>
     </div>
 

@@ -5,7 +5,7 @@ import Section8Box from "./Section8Box";
 
 const Section8 = () => {
     return (
-        <div className="flex lg:flex-row mt-8 lg:mx-64">
+        <div className="flex lg:flex-row mt-8  justify-center items-center lg:mx-64">
             <div className="grid lg:grid-cols-2 gap-3">
                 <Section8Box cont="SOC 2 Type 2 Compliant" />
                 <Section8Box cont="Coalition for Content Provenance and Authenticity (C2PA)" />

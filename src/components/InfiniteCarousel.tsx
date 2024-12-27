@@ -12,7 +12,7 @@ const images = [
 export default function InfiniteCarousel() {
     return (
 
-        <div className="overflow-hidden relative w-full h-64 mt-20">
+        <div className="overflow-hidden relative w-full h-64 mt-20 mb-20">
             {/* Blur overlay on the left */}
             <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-gray-100 to-transparent z-10 pointer-events-none"></div>
 

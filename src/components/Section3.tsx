@@ -17,7 +17,7 @@ const Section2 = () => {
                     Whatever you do, whoever you work with — here's how HeyGen can help.
                 </p>
             </div>
-            <div className="flex flex-col lg:flex-row  justify-center align-center mt-16 gap-10">
+            <div className="flex flex-col lg:flex-row  justify-center items-center mt-16 gap-10">
 
                 {/* <video className="w-4/12 border rounded-xl max-h-96" src="https://res.cloudinary.com/diqmvbeg6/video/upload/q_auto/v1727421678/WebFlow/zscnxyrjlqtmial5j3kr.mp4"></video> */}
 <div className="w-[450px] border rounded-xl mx-4 h-[250px] bg-black">

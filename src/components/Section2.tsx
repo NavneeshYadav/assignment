@@ -2,7 +2,7 @@
 const Section2 = () => {
     return (
         <section>
-            <div className="flex flex-col md:flex-row justify-center align-center">
+            <div className="flex flex-col md:flex-row justify-center items-center">
                 <div className="mt-8  h-96 text-center mx-10">
                     <img className="block lg:h-[400px]" src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be/67521ebd070b3788dbc875c1_Homepage%20Avatar%20Block-p-800.webp" alt="image" />
                 </div>
