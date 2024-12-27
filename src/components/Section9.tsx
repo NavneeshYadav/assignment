@@ -26,7 +26,7 @@ const Section9 = () => {
                         </div>
                     </div>
                     <div>
-                        <img className="w-96 h-48 rounded-t-xl" src="https://cdn.prod.website-files.com/66fe8021b25e3d52866115cd/6712df1a1e54c63506e9466e_Olgivy%20Feature%20Image-p-2000.png" alt="image1" />
+                        <img className="w-96 h-48 rounded-t-xl" src="https://cdn.prod.website-files.com/66fe8021b25e3d52866115cd/671858e4480e7a4ef5539f68_Publicis%20Groupe%20Featured%20Image-p-500.png" alt="image1" />
                         <div className="bg-gray-200 w-96 h-56 rounded-b-xl">
                             <div className="pt-7 text-center">
                                 <span className="text-black bg-white mx-1 p-2 rounded-2xl">Agency</span>
@@ -43,7 +43,7 @@ const Section9 = () => {
                         </div>
                     </div>
                     <div>
-                        <img className="w-96 h-48 rounded-t-xl" src="https://cdn.prod.website-files.com/66fe8021b25e3d52866115cd/6712df1a1e54c63506e9466e_Olgivy%20Feature%20Image-p-2000.png" alt="image1" />
+                        <img className="w-96 h-48 rounded-t-xl" src="https://cdn.prod.website-files.com/66fe8021b25e3d52866115cd/6712e094dee11753c28aee1b_World%20Economic%20Forum%20Featured%20Image-p-500.png" alt="image1" />
                         <div className="bg-gray-200 w-96 h-56 rounded-b-xl">
                             <div className="pt-7 text-center">
                                 <span className="text-black bg-white mx-1 p-2 rounded-2xl">Agency</span>
