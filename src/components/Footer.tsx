@@ -4,7 +4,7 @@ import Link from "next/link"
 import Image from 'next/image';
 export default function Footer() {
     return (
-        <footer className="w-full py-12 bg-gray-200">
+        <footer className="w-full py-12 bg-[url('/images/image4.svg')] bg-cover bg-center">
             <div className="flex lg:flex-row">
                 <div className="lg:ml-8 lg:mr-20">
                     <Link href="/" className="text-xl font-bold">

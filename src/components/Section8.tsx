@@ -5,22 +5,49 @@ import Section8Box from "./Section8Box";
 
 const Section8 = () => {
     return (
-        <div className="flex lg:flex-row mt-8  justify-center items-center lg:mx-64">
-            <div className="grid lg:grid-cols-2 gap-3">
-                <Section8Box cont="SOC 2 Type 2 Compliant" />
-                <Section8Box cont="Coalition for Content Provenance and Authenticity (C2PA)" />
-                <Section8Box cont="Content Authenticity Initiative" />
-                <Section8Box cont="General Data Protection Regulation Compliant" />
-            </div>
+        <div className="mx-64 px-4 py-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+                <div className="grid grid-cols-2 gap-4">
+                    {/* AICPA SOC Badge */}
+                    <div className="bg-gray-50 rounded-3xl p-6 h-60 flex flex-col items-center text-center">
+                        <div className="rounded-full w-20 h-20 mb-4 flex items-center justify-center">
+                            <img src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be/66aa009a4487cd01d6d0225d_651f5a63262ba8e6968d9a45_SOC_2_Compliance_Blog_OG%201.avif" alt="image1" />
+                        </div>
+                        <p className="text-sm">SOC 2 Type 2 Compliant</p>
+                    </div>
+                    <div className="bg-green-400 rounded-3xl p-6 h-60 flex flex-col items-center text-center">
+                        <div className=" w-20 h-20 mb-4 flex items-center justify-center">
+                            <img src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be/66aa0100859bacb9d46731fa_65647d339c017f844ae8fe20_c2pa%201.avif" alt="image1" />
+                        </div>
+                        <p className="text-sm">Coalition for Content Provenance and Authenticity (C2PA)</p>
+                    </div>
+                    <div className="bg-green-400 rounded-3xl p-6 h-60 flex flex-col items-center text-center">
+                        <div className="rounded-full w-20 h-20 mb-4 flex items-center justify-center mix-blend-multiply">
+                            <img src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be/66aa01427b43ab524e8a7d54_651f5a63262ba8e6968d9a45_SOC_2_Compliance_Blog_OG%201.avif" alt="image1" />
+                        </div>
+                        <p className="text-sm">Content Authenticity Initiative</p>
+                    </div>
+                    <div className="bg-gray-50 rounded-3xl p-6 h-60 flex flex-col items-center text-center">
+                        <div className=" rounded-full w-20 h-20 mb-4 flex items-center justify-center">
+                            <img src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be/66aa016c9633c8dbdf53f9dc_Top_Layer.avif" alt="image1" />
+                        </div>
+                        <p className="text-sm">General Data Protection Regulation Compliant</p>
+                    </div>
+                </div>
 
-            <div className="text-left">
-                <h1 className="text-5xl weight-400 mb-2">Secure.</h1>
-                <h1 className="text-5xl weight-400 mb-2">Responsible.</h1>
-                <h1 className="text-5xl weight-400 mb-2">Secure.</h1>
-                <p className="text-lg">
-                    Your customers can speak to your avatar live. They ask questions and an avatar responds, using your knowledge base and an LLM to enable a natural conversation with a person, not a painful interaction with a chat-bot.
-                </p>
-                <button className="text-white lg:block bg-black border mt-4 px-3 py-2 rounded-3xl hover:bg-fuchsia-600">See a demo</button>
+                <div className="space-y-6">
+                    <div className="space-y-2">
+                        <h2 className="text-5xl font-medium">Secure.</h2>
+                        <h2 className="text-5xl font-medium">Responsible.</h2>
+                        <h2 className="text-5xl font-medium">Ethical.</h2>
+                    </div>
+                    <p className="text-gray-600 text-lg">
+                        We are committed to safety, security, and ethical use of our service. AI avatars can only be created and shared with express consent and cannot be used to spread content that's harmful to others.
+                    </p>
+                    <button className="mt-4 px-6 py-2 bg-black text-white rounded-3xl hover:bg-fuchsia-600">
+                        Learn about Trust & Safety
+                    </button>
+                </div>
             </div>
         </div>
     )
