@@ -9,8 +9,11 @@ const Section5 = () => {
                     <button className="text-black px-3 py-2 rounded-3xl bg-white hover:bg-fuchsia-400">Learn more</button>
                 </div>
                 {/* <video className="rounded-2xl w-96 mt-20 mx-auto lg:mr-12 mb-12 lg:mb-12" src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be%2F66e577329101468db7a867e9_HeyGen-13-Localize-580x580-081524-transcode.webm"></video> */}
-             <div className="bg-black h-[480px] rounded-2xl lg:w-96 mt-20 mx-1 lg:mx-8 lg:mr-12 mb-12 lg:mb-16">
-
+             <div className="">
+   <video className="rounded-2xl h-[500px] my-20" loop autoPlay muted>
+                        <source src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be%2F66e577329101468db7a867e9_HeyGen-13-Localize-580x580-081524-transcode.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
              </div>
                     
             </div>

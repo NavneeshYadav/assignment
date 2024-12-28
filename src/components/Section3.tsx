@@ -7,8 +7,19 @@ import {
 } from "@/components/ui/accordion"
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
-
+import { GoUnmute } from "react-icons/go";
+import { IoVolumeMute } from "react-icons/io5";
+import { useRef, useState } from "react";
 const Section2 = () => {
+    const videoRef = useRef<HTMLVideoElement | null>(null); // Reference to the video element
+    const [isMuted, setIsMuted] = useState(true); // State to track mute status
+
+    const toggleMute = () => {
+        if (videoRef.current) {
+            videoRef.current.muted = !isMuted; // Toggle the muted property
+            setIsMuted(!isMuted); // Update state
+        }
+    }
     return (
         <section>
             <div className="mt-20 text-left mx-8 sm:text-center ">
@@ -20,9 +31,22 @@ const Section2 = () => {
             <div className="flex flex-col lg:flex-row  justify-center items-center mt-16 gap-10">
 
                 {/* <video className="w-4/12 border rounded-xl max-h-96" src="https://res.cloudinary.com/diqmvbeg6/video/upload/q_auto/v1727421678/WebFlow/zscnxyrjlqtmial5j3kr.mp4"></video> */}
-<div className="w-[450px] border rounded-xl mx-4 h-[250px] bg-black">
+                {/* <div className="w-[450px] border rounded-xl mx-4 h-[250px] bg-black">
 
-</div>
+</div> */}
+
+                <div className="relative">
+                    <video className="rounded-2xl w-[450px] mx-auto" ref={videoRef} loop autoPlay muted>
+                        <source src="https://resource.heygencdn.com/homepage/AImail_final_opt.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video><button
+                        onClick={toggleMute}
+                        className="px-4 py-2 absolute top-14 left-24 bg-white text-white font-bold rounded-lg shadow focus:outline-none focus:ring focus:ring-transparent"
+                    >
+                        {isMuted ? <IoVolumeMute className="text-black" /> : <GoUnmute className="text-black" />}
+                    </button>
+                </div>
+
                 <div className="mx-7 lg:h-[250px]">
                     <Accordion className="w-96" type="single" collapsible>
                         <AccordionItem value="item-1" >
