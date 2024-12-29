@@ -5,10 +5,32 @@ import Link from "next/link";
 import NavbarContent from "./NavbarContent";
 import { IoMdClose } from "react-icons/io";
 import { FaArrowRight } from "react-icons/fa";
-const Navbar = () => {
+
+interface MenuItem {
+    label: string;
+    hasDropdown: boolean;
+}
+const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isVisible, setIsVisible] = useState(true); // State to control visibility
 
+    const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(null);
+
+    // List of menu items
+    const menuItems: MenuItem[] = [
+        { label: 'Platform', hasDropdown: true },
+        { label: 'Solutions', hasDropdown: true },
+        { label: 'Resources', hasDropdown: true },
+        { label: 'Pricing', hasDropdown: true },
+        { label: 'Enterprise', hasDropdown: false },
+        { label: 'Company', hasDropdown: true },
+    ];
+
+
+    // Toggle function with type for index
+    const toggleDropdown = (index: number): void => {
+        setOpenDropdownIndex(openDropdownIndex === index ? null : index);
+    };
     const handleRemoveDiv = () => {
         setIsVisible(false); // Set state to false to hide the div
     };
@@ -17,8 +39,9 @@ const Navbar = () => {
             {isVisible &&
                 <div className="relative text-white mt-2 mx-2 rounded-sm py-2 text-center bg-fuchsia-600">
                     URL to Generate Podcast <span className="underline ml-3">Try Now <FaArrowRight className="inline-block ml-1" /></span>
-                    <button className="absolute right-4" onClick={handleRemoveDiv}><IoMdClose className="mt-1"/></button>
+                    <button className="absolute right-4" onClick={handleRemoveDiv}><IoMdClose className="mt-1" /></button>
                 </div>}
+
             <nav className="bg-white z-30 text-black flex lg:items-center lg:min-h-20 ">
                 <div className="leftside flex lg:flex-row lg:gap-10 ">
                     <div className="lg:ml-8">
@@ -31,12 +54,53 @@ const Navbar = () => {
                             className={`flex flex-col lg:flex-row gap-4 lg:gap-8 lg:items-center absolute lg:static bg-gray-800 lg:bg-transparent w-full lg:w-auto ${isOpen ? "top-14 left-0 p-4" : "hidden lg:flex"
                                 }`}
                         >
-                            <NavbarContent content="Platforms" disablearrow="1" />
-                            <NavbarContent content="Solutions" disablearrow="1" />
-                            <NavbarContent content="Resources" disablearrow="1" />
-                            <NavbarContent content="Pricing" disablearrow="1" />
-                            <NavbarContent content="Enterprise" disablearrow="0" />
-                            <NavbarContent content="Company" disablearrow="1" />
+                            {menuItems.map((item, index) => (
+                                <li key={index} className="relative">
+                                    <button
+                                        className="hover:text-gray-400 flex items-center"
+                                        onClick={() => toggleDropdown(index)}
+                                    >
+                                        {item.label}
+                                        {item.hasDropdown && (
+                                            <IoIosArrowDown
+                                                className={`ml-1 transition-transform duration-300 ${openDropdownIndex === index ? 'rotate-180' : ''
+                                                    }`}
+                                            />
+                                        )}
+                                    </button>
+
+                                    {item.hasDropdown && openDropdownIndex === index && (
+                                        <div className="flex flex-row gap-5 absolute mt-2 top-6 p-4 bg-white border rounded-2xl shadow-lg">
+                                            <div>
+                                                <h1 className="text-gray-400">PRODUCTS
+                                                </h1>
+                                                <p>Avatar Video</p>
+                                                <p>Video Translation</p>
+                                                <p>Personalised Video</p>
+                                                <p>Interactive Avatar</p>
+                                            </div>
+                                            <div>
+                                                <h1 className="text-gray-400">FEATURES
+                                                </h1>
+                                                <p>Stock Avatar</p>
+                                                <p>API</p>
+                                                <p>API Pricing</p>
+                                            </div>
+                                            <div className="w-72 h-72 ">
+                                                <img className="inline-block h-52 rounded-t-xl" src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be/673bc59a6019d8801c2ad722_LatestDropsNavThumb.webp" alt="image1" />
+
+                                                <div className="bg-slate-200 py-3 pl-2 rounded-b-xl">
+                                                    <p>Check out our latest drops</p>
+                                                    <p className="text-purple-600">Learn more <FaArrowRight className="inline" /></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+                                </li>
+                            ))}
+
+
+
 
                         </ul>
                     </div>
@@ -48,7 +112,14 @@ const Navbar = () => {
                                 }`}
                         >
                             <div>
-                                <NavbarContent content="Login" disablearrow="0" />
+                                <li>
+                                    <div className="flex flex-row items-center gap-1">
+                                        <Link href="/" className="hover:text-gray-400">
+                                            Login
+                                        </Link>
+
+                                    </div>
+                                </li>
                             </div>
 
                             <button className="border-2 border-black px-3 py-2 rounded-3xl">Contact Sales</button>
@@ -61,7 +132,7 @@ const Navbar = () => {
                 </div>
             </nav>
         </div>
-    );
-};
+    )
+}
 
 export default Navbar;
