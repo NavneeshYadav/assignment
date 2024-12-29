@@ -10,7 +10,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { GoUnmute } from "react-icons/go";
 import { IoVolumeMute } from "react-icons/io5";
 import { useRef, useState } from "react";
-const Section2 = () => {
+const Section3 = () => {
     const videoRef = useRef<HTMLVideoElement | null>(null); // Reference to the video element
     const [isMuted, setIsMuted] = useState(true); // State to track mute status
 
@@ -95,4 +95,4 @@ const Section2 = () => {
         </section>
     )
 }
-export default Section2;
+export default Section3;
