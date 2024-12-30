@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import Link from "next/link";
 import { IoMdClose } from "react-icons/io";
@@ -34,6 +34,34 @@ const Navbar: React.FC = () => {
     const handleRemoveDiv = () => {
         setIsVisible(false); // Set state to false to hide the div
     };
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (openDropdownIndex !== null) {
+                setOpenDropdownIndex(null);
+            }
+        };
+
+        document.addEventListener('click', handleClickOutside);
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, [openDropdownIndex]);
+
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsSmallScreen(window.innerWidth < 1024); // Tailwind's `sm` breakpoint is 640px
+        };
+
+        // Check on initial render and add event listener
+        handleResize();
+        window.addEventListener("resize", handleResize);
+
+        // Cleanup on unmount
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     return (
         <div className="sticky top-0 z-50 pt-1 bg-white">
             {isVisible &&
@@ -49,9 +77,9 @@ const Navbar: React.FC = () => {
                             <img src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be/66e1a30a9a12f4c1d2bb3e9f_heygen-logotype.svg" alt="internet connection issue" />
                         </Link>
                     </div>
-                    <div className="flex lg:flex-row ">
+                    <div className="flex lg:flex-row">
                         <ul
-                            className={`flex flex-col lg:flex-row gap-4 lg:gap-8 lg:items-center absolute lg:static bg-gray-800 lg:bg-transparent w-full lg:w-auto ${isOpen ? "top-14 left-0 p-4" : "hidden lg:flex"
+                            className={`flex lg:flex-row gap-4 lg:gap-8 lg:items-center lg:static lg:bg-transparent w-full lg:w-auto ${isOpen ? "bg-white flex-col absolute top-32 left-0 p-4" : "hidden lg:flex"
                                 }`}
                         >
                             {menuItems.map((item, index) => (
@@ -98,45 +126,51 @@ const Navbar: React.FC = () => {
                                     )}
                                 </li>
                             ))}
+                            <button className="text-left px-3 py-2 rounded-3xl lg:hidden">Contact Sales</button>
+                            <div className="flex flex-col">
+                                <Link href="#" className="bg-black text-white mt-2 w-36 text-center rounded-3xl px-3 py-2 lg:hidden">
+                                    Sign Up for free
+                                </Link>
+                                <Link href="/login" className="rounded-2xl p-2 mt-2 w-20 text-center border-black lg:hidden bg-slate-300">
+                                    Login
+                                </Link>
 
-
-
+                            </div>
 
                         </ul>
                     </div>
-                </div>
-                <div className="rightside flex lg:flex-row lg:gap-10 absolute right-5">
-                    <div className="flex lg:flex-row">
+                    <div className="rightside flex flex-col lg:flex-row lg:gap-10 justify-center items-center absolute right-5">
+                        {/* Conditionally Render Login Link */}
+                        {!isSmallScreen && (
+                            <Link
+                                href="/login"
+                                className="hover:text-gray-400"
+                            >
+                                Login
+                            </Link>
+                        )}
+
+                        {/* Conditionally Render Contact Sales and Sign-up Buttons */}
+                        <div>
+                            {!isSmallScreen && (
+                                <button className="border-[1px] mx-1 border-black px-3 py-2 rounded-3xl">
+                                    Contact Sales
+                                </button>
+                            )}
+                            <button className="text-white mr-10 lg:mr-4  bg-black border px-3 py-2 rounded-3xl hover:bg-purple-800">
+                                Sign up for free
+                            </button>
+                        </div>
                         {/* Hamburger Menu for Mobile */}
                         <button
-                            className=" lg:hidden text-2xl"
+                            className="absolute right-0 top-2 lg:hidden text-2xl"
                             onClick={() => setIsOpen(!isOpen)}
                         >
                             {isOpen ? <IoMdClose /> : <GiHamburgerMenu />}
                         </button>
-                        <ul
-                            className={`flex flex-col lg:flex-row gap-4 lg:gap-8 lg:items-center absolute lg:static bg-gray-800 lg:bg-transparent w-full lg:w-auto ${isOpen ? "top-14 left-0 p-4" : "hidden lg:flex"
-                                }`}
-                        >
-                            <div>
-                                <li>
-                                    <div className="flex flex-row items-center gap-1">
-                                        <Link href="/" className="hover:text-gray-400">
-                                            Login
-                                        </Link>
-
-                                    </div>
-                                </li>
-                            </div>
-
-                            <button className="border-2 border-black px-3 py-2 rounded-3xl">Contact Sales</button>
-                            <button className="text-white bg-black border px-3 py-2 rounded-3xl hover:bg-purple-800">Sign up for free</button>
-
-
-
-                        </ul>
                     </div>
                 </div>
+
             </nav>
         </div>
     )
