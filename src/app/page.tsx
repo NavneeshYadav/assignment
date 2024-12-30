@@ -9,7 +9,6 @@ import Section7 from "@/components/Section7";
 import Section8 from "@/components/Section8";
 import Section9 from "@/components/Section9";
 import Section10 from "@/components/Section10";
-import Image from "next/image";
 import { InfiniteSlider } from "@/components/InfiniteSlider";
 import InfiniteCarousel from "@/components/InfiniteCarousel";
 import Footer from "@/components/Footer";
@@ -25,9 +24,9 @@ export default function Home() {
         <Section3 />
         <Section4 />
         <Section5 />
-        {/* <Section6 /> */}
+        <Section6 />
         <Section7 />
-        {/* <Section8/> */}
+        <Section8/>
         <Section9 />
         <Section10 />
         <InfiniteCarousel />
