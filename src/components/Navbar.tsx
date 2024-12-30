@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
                     </div>
                     <div className="flex lg:flex-row">
                         <ul
-                            className={`flex lg:flex-row gap-4 lg:gap-8 lg:items-center lg:static lg:bg-transparent w-full lg:w-auto ${isOpen ? "bg-white flex-col absolute top-32 left-0 p-4" : "hidden lg:flex"
+                            className={`flex lg:flex-row gap-4 lg:gap-8 lg:items-center lg:static lg:bg-transparent w-full lg:w-auto ${isOpen ? "bg-white flex-col absolute mt-10 left-0 p-4" : "hidden lg:flex"
                                 }`}
                         >
                             {menuItems.map((item, index) => (
@@ -98,28 +98,30 @@ const Navbar: React.FC = () => {
                                     </button>
 
                                     {item.hasDropdown && openDropdownIndex === index && (
-                                        <div className="flex flex-row gap-5 absolute mt-2 top-6 p-4 bg-white border rounded-2xl shadow-lg">
+                                        <div className="flex z-20 flex-row gap-5 absolute mt-2 top-6 p-4 bg-white border rounded-2xl shadow-lg">
                                             <div>
-                                                <h1 className="text-gray-400">PRODUCTS
-                                                </h1>
-                                                <p>Avatar Video</p>
-                                                <p>Video Translation</p>
-                                                <p>Personalised Video</p>
-                                                <p>Interactive Avatar</p>
-                                            </div>
-                                            <div>
-                                                <h1 className="text-gray-400">FEATURES
-                                                </h1>
-                                                <p>Stock Avatar</p>
-                                                <p>API</p>
-                                                <p>API Pricing</p>
-                                            </div>
-                                            <div className="w-72 h-72 ">
-                                                <img className="inline-block h-52 rounded-t-xl" src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be/673bc59a6019d8801c2ad722_LatestDropsNavThumb.webp" alt="image1" />
+                                                <div>
+                                                    <h1 className="text-gray-400">PRODUCTS
+                                                    </h1>
+                                                    <p>Avatar Video</p>
+                                                    <p>Video Translation</p>
+                                                    <p>Personalised Video</p>
+                                                    <p>Interactive Avatar</p>
+                                                </div>
+                                                <div>
+                                                    <h1 className="text-gray-400">FEATURES
+                                                    </h1>
+                                                    <p>Stock Avatar</p>
+                                                    <p>API</p>
+                                                    <p>API Pricing</p>
+                                                </div>
+                                                <div className="w-72 h-72 ">
+                                                    <img className="inline-block h-52 rounded-t-xl" src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be/673bc59a6019d8801c2ad722_LatestDropsNavThumb.webp" alt="image1" />
 
-                                                <div className="bg-slate-200 py-3 pl-2 rounded-b-xl">
-                                                    <p>Check out our latest drops</p>
-                                                    <p className="text-purple-800">Learn more <FaArrowRight className="inline" /></p>
+                                                    <div className="bg-slate-200 py-3 pl-2 rounded-b-xl">
+                                                        <p>Check out our latest drops</p>
+                                                        <p className="text-purple-800">Learn more <FaArrowRight className="inline" /></p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
