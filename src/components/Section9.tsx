@@ -20,7 +20,7 @@ const Section9 = () => {
                             </div>
                             <p className="mt-6 mx-4 text-lg text-left mb-6">How Ogilvy used HeyGen to get Gen Z to talk about their emotions</p>
 
-                            <button className="bg-black ml-4 text-white p-2 rounded-full hover:bg-fuchsia-600">
+                            <button className="bg-black ml-4 text-white p-2 rounded-full hover:bg-purple-800">
                                 <IoIosArrowForward />
                             </button>
                         </div>
@@ -35,7 +35,7 @@ const Section9 = () => {
                             </div>
                             <p className="mt-6 mx-4 text-lg text-left mb-6">How Ogilvy used HeyGen to get Gen Z to talk about their emotions</p>
 
-                            <button className="bg-black ml-4 text-white p-2 rounded-full hover:bg-fuchsia-600">
+                            <button className="bg-black ml-4 text-white p-2 rounded-full hover:bg-purple-800">
                                 <IoIosArrowForward />
                             </button>
 
@@ -52,14 +52,14 @@ const Section9 = () => {
                             </div>
                             <p className="mt-6 mx-4 text-lg text-left mb-6">How Ogilvy used HeyGen to get Gen Z to talk about their emotions</p>
 
-                            <button className="bg-black ml-4 text-white p-2 rounded-full hover:bg-fuchsia-600">
+                            <button className="bg-black ml-4 text-white p-2 rounded-full hover:bg-purple-800">
                                 <IoIosArrowForward />
                             </button>
                         </div>
                     </div>
                 </div>
                 <div className="w-56 text-center mt-10 lg:mx-auto">
-                    <button className="text-white bg-black border px-4 py-2 rounded-3xl hover:bg-fuchsia-600">View all customer stories</button>
+                    <button className="text-white bg-black border px-4 py-2 rounded-3xl hover:bg-purple-600">View all customer stories</button>
                 </div>
             </div>
 

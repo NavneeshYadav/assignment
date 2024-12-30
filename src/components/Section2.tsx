@@ -12,7 +12,7 @@ const Section2 = () => {
                         It's you. Well, an AI version of you that speaks 175 languages, moves naturally, and always follows the script. Create your own avatar with just a webcam, or use one of our avatars. Change voice, clothes, or background with a click.
                     </div>
                     <div className="mt-4 sm:mx-4">
-                        <button className="text-white bg-black border px-3 py-2 rounded-3xl lg:block lg:min-w-full hover:bg-fuchsia-600">Sign up for free</button>
+                        <button className="text-white bg-black border px-3 py-2 rounded-3xl lg:block lg:min-w-full hover:bg-purple-800">Sign up for free</button>
                     </div>
                 </div>
             </div>
