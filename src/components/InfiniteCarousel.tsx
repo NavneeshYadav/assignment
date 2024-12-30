@@ -4,9 +4,10 @@ import Image from 'next/image';
 
 const images = [
     '/images/image1.avif',
-    '/images/image1.avif',
-    '/images/image1.avif',
-    '/images/image1.avif', // Add as many images as needed
+    '/images/image6.avif',
+    '/images/image7.avif',
+    '/images/image8.avif',
+    '/images/image5.webp', // Add as many images as needed
 ];
 
 export default function InfiniteCarousel() {

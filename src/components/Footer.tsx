@@ -5,14 +5,14 @@ import Image from 'next/image';
 export default function Footer() {
     return (
         <footer className="w-full py-12 bg-[url('/images/image4.svg')] bg-cover bg-center">
-            <div className="flex lg:flex-row">
-                <div className="lg:ml-8 lg:mr-20">
+            <div className="flex lg:flex-row flex-col">
+                <div className="lg:ml-8 ml-3 lg:mr-20">
                     <Link href="/" className="text-xl font-bold">
                         <img src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be/66e1a30a9a12f4c1d2bb3e9f_heygen-logotype.svg" alt="internet connection issue" />
                     </Link>
-                    <div className="w-40 mt-8 text-center">
-                        <button className="text-white bg-black border px-3 py-2 rounded-3xl hover:bg-fuchsia-600">Sign up for free</button>
-                        <button className="text-black lg:block ml-3 bg-gray-300 mt-4 px-3 py-2 rounded-3xl hover:bg-fuchsia-600">Login</button>
+                    <div className="w-40 mt-8 text-left">
+                        <button className="text-white bg-black ml-3 border px-3 py-2 rounded-3xl hover:bg-fuchsia-600">Sign up for free</button>
+                        <button className="text-black lg:block ml-3 bg-gray-300 mt-4 mb-3 px-3 py-2 rounded-3xl hover:bg-fuchsia-600">Login</button>
                     </div>
 
                 </div>
@@ -126,7 +126,7 @@ export default function Footer() {
                         90094
                     </p>
                 </div>
-                <div className="flex flex-row mx-24 gap-3">
+                <div className="flex flex-row lg:mx-24 mb-2 gap-3">
 
                     <Image src="/images/image2.avif" alt={"image2"} width={70}
                         height={20} />

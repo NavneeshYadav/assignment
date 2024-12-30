@@ -2,7 +2,7 @@ const Section5 = () => {
     return (
         <div className="mt-10 pt-20 bg-[url('https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be/66dc391e06db0a58c13ee13e_texture%203.avif')] bg-cover bg-center">
             <div className="relative">
-                <img className="mx-auto max-w-[432px] lg:max-w-[992px] rounded-2xl block" src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be/67521ed7073c3ab9fd2da9b0_Hompage%20Avatar.webp" alt="image" />
+                <img className="mx-auto w-80 lg:w-6/12 lg:mb-40 rounded-2xl" src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be/67521ed7073c3ab9fd2da9b0_Hompage%20Avatar.webp" alt="image" />
                 {/* <div className="absolute bottom-12 left-[264px] bg-slate-800 w-80 rounded-xl h-52">
                     <div className="flex flex-row items-center mt-6 ml-6 w-24 px-2 py-1 rounded-sm border-gray-500 border-[1px] text-white">
                         <img className="h-4 mr-2 " src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be/66a9f771873e3f98b4b92f58_%F0%9F%8C%8E.avif" alt="image" />
