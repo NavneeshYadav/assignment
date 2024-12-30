@@ -19,7 +19,7 @@ const Section1: React.FC = () => {
     return (
         <section className="py-7 flex sm:flex-col">
             <div className="bg-[url('https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be/66db31dbefabba2ccab38c8b_hero-2%202.avif')] bg-cover bg-center">
-                <h1 className="text-6xl text-center">Create and translate videos <br />with HeyGen's AI Video Generator</h1>
+                <h1 className="text-[34px] lg:text-6xl text-center font-light mx-2">Create and translate videos <br />with HeyGen's AI Video Generator</h1>
                 <p className="text-xl mt-3 text-center">Produce studio-quality videos in 175 languages without a camera or crew.</p>
                 <div className="w-40 mt-4 text-center mx-auto">
                     <button className="text-white bg-black border px-3 py-2 rounded-3xl hover:bg-purple-800">Sign up for free</button>
@@ -38,7 +38,7 @@ const Section1: React.FC = () => {
                     >
                         {isMuted ? <IoVolumeMute className="text-black" /> : <GoUnmute className="text-black" />}
                     </button>
-                    <div className="absolute bottom-12 left-24 bg-white w-80 rounded-xl h-56 border-8">
+                    <div className="hidden absolute lg:bottom-12 lg:left-24 bg-white w-80 rounded-xl h-56 border-8">
                         <div className="flex flex-row mt-6 ml-6">
                             <img className="rounded-full mx-1 w-8" src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be/66db342e29294df7682b40e8_Avatar%201.avif" alt="img1" />
                             <img className="mx-1 w-8" src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be/66eb0a35a235b95dd923f95a_headshot.webp" alt="img2" />

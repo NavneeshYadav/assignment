@@ -23,7 +23,7 @@ const Section3 = () => {
     return (
         <section>
             <div className="mt-20 text-left mx-8 sm:text-center ">
-                <h2 className="text-5xl weight-400 mb-5">Video for content creators like you.</h2>
+                <h2 className="text-4xl lg:text-5xl weight-400 mb-5">Video for content creators like you.</h2>
                 <p className="text-lg">
                     Whatever you do, whoever you work with — here's how HeyGen can help.
                 </p>

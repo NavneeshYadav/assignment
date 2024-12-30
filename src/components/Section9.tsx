@@ -7,7 +7,7 @@ const Section9 = () => {
         <section>
             <div className="mt-28">
                 <h1 className="mb-28 text-center font-medium text-5xl">Made With HeyGen</h1>
-                <div className="flex lg:flex-row justify-center gap-10 mt-4">
+                <div className="flex flex-col lg:flex-row justify-center items-center gap-10 mt-4">
                     <div className="">
 
                         <img className="w-96 h-48 rounded-t-xl" src="https://cdn.prod.website-files.com/66fe8021b25e3d52866115cd/6712df1a1e54c63506e9466e_Olgivy%20Feature%20Image-p-2000.png" alt="image1" />
@@ -58,7 +58,7 @@ const Section9 = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-56 text-center mt-10 lg:mx-auto">
+                <div className="w-56 text-center mt-10 mx-auto">
                     <button className="text-white bg-black border px-4 py-2 rounded-3xl hover:bg-purple-600">View all customer stories</button>
                 </div>
             </div>
