@@ -12,19 +12,17 @@ const Section5 = () => {
                     <p className="mx-6 mt-4 text-white border-gray-500 px-2 pt-2 h-28 border-[1px] rounded-sm">Hey there! Welcome to HeyGen, where you can create and translate videos without a camera or crew.</p>
                 </div> */}
             </div>
-            <div className="mt-28 px-20 bg-violet-950 flex flex-col lg:flex-row mx-4 lg:mx-9 rounded-lg justify-center items-center">
-                <div className="text-white text-left mx-auto lg:w-[700px] lg:pr-32">
-                    <h2 className="text-4xl lg:text-6xl mb-5">Every video you have in every language you need.</h2>
-                    <p className="text-xl mb-5 ">Update existing videos to 175 languages and dialects in minutes. We can even translate for you or add subtitles, making sure lips and voice match perfectly for the world's easiest, most effective localization.</p>
-                    <button className="text-black px-3 py-2 rounded-3xl bg-white hover:bg-fuchsia-400">Learn more</button>
+            <div className="bg-violet-950 mt-10 mx-6 rounded-3xl px-7  lg:px-20 py-20 flex flex-col lg:flex-row justify-center items-center">
+                <div className="text-white lg:pr-52 mb-10">
+                    <h2 className="text-4xl lg:text-5xl">Every video you have in every language you need.</h2>
+                    <p className="text-xl mt-4">Update existing videos to 175 languages and dialects in minutes. We can even translate for you or add subtitles, making sure lips and voice match perfectly for the world's easiest, most effective localization.</p>
+                    <button className="rounded-3xl mt-4 bg-white hover:bg-purple-300 text-black px-3 py-2">Learn more</button>
                 </div>
-                <div className="">
-                    <video className="rounded-2xl h-[500px] my-20" loop autoPlay muted>
+             
+                    <video className="rounded-3xl w-full h-full" loop autoPlay muted>
                         <source src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be%2F66e577329101468db7a867e9_HeyGen-13-Localize-580x580-081524-transcode.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
-                </div>
-
             </div>
         </div>
     )

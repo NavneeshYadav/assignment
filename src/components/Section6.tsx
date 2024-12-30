@@ -15,9 +15,9 @@ const Section6 = () => {
     }
     return (
         <section>
-            <div className="flex flex-col lg:flex-row justify-center items-center mx-64 mt-16 gap-5">
+            <div className="flex flex-col-reverse lg:flex-row justify-center items-center mt-20 gap-10">
                 <div className="relative">
-                    <video className="rounded-2xl w-[1600px] mx-auto" ref={videoRef} loop autoPlay muted>
+                    <video className="rounded-2xl mx-auto w-[75%] h-[75%]" ref={videoRef} loop autoPlay muted>
                         <source src="https://res.cloudinary.com/diqmvbeg6/video/upload/q_auto/v1727308222/HeyGen-2.0-StreamingAvatar-1400x1600-081524_npuqow.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video><button
@@ -28,14 +28,12 @@ const Section6 = () => {
                     </button>
                 </div>
                 {/* <video className="rounded-2xl" src="https://res.cloudinary.com/diqmvbeg6/video/upload/q_auto/v1727308222/HeyGen-2.0-StreamingAvatar-1400x1600-081524_npuqow.mp4"></video> */}
-                <div className=" text-left ml-4 ">
-                    <h1 className=" text-4xl lg:text-5xl weight-400 mb-5">Do it live</h1>
-                    <p className="text-lg">
+                <div className="mx-8 lg:w-4/12">
+                    <h1 className="text-3xl lg:text-5xl ">Do it live</h1>
+                    <p className="mt-9">
                         Your customers can speak to your avatar live. They ask questions and an avatar responds, using your knowledge base and an LLM to enable a natural conversation with a person, not a painful interaction with a chat-bot.
                     </p>
-                    <button className="text-white bg-black border mt-4 px-3 py-2 rounded-3xl hover:bg-purple-800">See a demo</button>
-
-
+                    <button className="text-white bg-black border mt-6 px-3 py-2 rounded-3xl hover:bg-purple-800">See a demo</button>
                 </div>
             </div>
 
