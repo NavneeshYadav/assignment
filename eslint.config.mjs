@@ -16,6 +16,7 @@ const eslintConfig = [
     files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"], // Apply to these file types
     rules: {
       "react/no-unescaped-entities": "off", // Turn off the rule
+      "@next/next/no-img-element": "off",
     },
   },
 ];
