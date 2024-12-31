@@ -1,3 +1,4 @@
+"use client";
 const Section5 = () => {
     return (
         <div className="mt-10 pt-20 bg-[url('https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be/66dc391e06db0a58c13ee13e_texture%203.avif')] bg-cover bg-center">
@@ -18,11 +19,11 @@ const Section5 = () => {
                     <p className="text-xl mt-4">Update existing videos to 175 languages and dialects in minutes. We can even translate for you or add subtitles, making sure lips and voice match perfectly for the world's easiest, most effective localization.</p>
                     <button className="rounded-3xl mt-4 bg-white hover:bg-purple-300 text-black px-3 py-2">Learn more</button>
                 </div>
-             
-                    <video className="rounded-3xl w-full h-full" loop autoPlay muted>
-                        <source src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be%2F66e577329101468db7a867e9_HeyGen-13-Localize-580x580-081524-transcode.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
+
+                <video className="rounded-3xl w-full h-full" loop autoPlay muted>
+                    <source src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be%2F66e577329101468db7a867e9_HeyGen-13-Localize-580x580-081524-transcode.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
     )
