@@ -5,7 +5,6 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion"
-import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import { GoUnmute } from "react-icons/go";
 import { IoVolumeMute } from "react-icons/io5";
