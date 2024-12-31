@@ -1,6 +1,5 @@
 "use client";
 
-import Section8Box from "./Section8Box";
 
 
 const Section8 = () => {
