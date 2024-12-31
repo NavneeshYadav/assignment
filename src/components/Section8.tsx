@@ -35,7 +35,7 @@ const Section8 = () => {
                     </div>
                 </div>
 
-                <div className="space-y-6 mx-auto">
+                <div className="space-y-6 mt-8 lg:mt-0 mx-auto">
                     <div className="space-y-2">
                         <h2 className="text-4xl lg:text-5xl font-medium">Secure.</h2>
                         <h2 className="text-4xl lg:text-5xl font-medium">Responsible.</h2>
