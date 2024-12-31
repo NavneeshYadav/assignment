@@ -35,7 +35,7 @@ export const InfiniteSlider = () => {
                     .map((logo, index) => (
                         <div
                             className="slide flex w-[125px] mx-5 lg:mx-24 items-center justify-center"
-                            key={index} // Ensures unique keys across all elements
+                            key={index} // eslint-disable-line react/jsx-key
                         >
                             {logo}
                         </div>
