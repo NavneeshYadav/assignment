@@ -12,11 +12,11 @@ const Section9 = () => {
 
                         <img className="w-96 h-48 rounded-t-xl" src="https://cdn.prod.website-files.com/66fe8021b25e3d52866115cd/6712df1a1e54c63506e9466e_Olgivy%20Feature%20Image-p-2000.png" alt="image1" />
 
-                        <div className="bg-gray-200 lg:w-96 lg:h-56 h-72 rounded-b-xl">
-                            <div className="pt-7 flex flex-wrap ml-2 lg:ml-0 justify-start text-center">
-                                <span className="text-black bg-white mx-1 p-2 rounded-2xl">Agency</span>
-                                <span className="text-black bg-white mx-1 p-2 rounded-2xl">Personalized Video</span>
-                                <span className="text-black bg-white mx-1 mt-2 p-2 rounded-2xl">Marketing</span>
+                        <div className="bg-gray-200 lg:w-96 lg:h-56 h-72  rounded-b-xl">
+                            <div className="pt-7 ml-3 lg:ml-0 text-center flex flex-wrap lg:flex-nowrap justify-start lg:justify-center">
+                                <span className="text-black bg-white mx-1 py-2 px-3 rounded-3xl">Agency</span>
+                                <span className="text-black bg-white mx-1 py-2 px-3 rounded-3xl">Personalized Video</span>
+                                <span className="text-black bg-white mx-1 py-2 px-3 mt-2 lg:mt-0 rounded-3xl">Marketing</span>
                             </div>
                             <p className="mt-6 mx-4 text-lg text-left mb-6">How Ogilvy used HeyGen to get Gen Z to talk about their emotions</p>
 
@@ -27,11 +27,11 @@ const Section9 = () => {
                     </div>
                     <div>
                         <img className="w-96 h-48 rounded-t-xl" src="https://cdn.prod.website-files.com/66fe8021b25e3d52866115cd/671858e4480e7a4ef5539f68_Publicis%20Groupe%20Featured%20Image-p-500.png" alt="image1" />
-                        <div className="bg-gray-200 lg:w-96 lg:h-56 h-72 rounded-b-xl">
-                            <div className="pt-7 flex flex-wrap ml-2 lg:ml-0 justify-start text-center">
-                                <span className="text-black bg-white mx-1 p-2 rounded-2xl">Agency</span>
-                                <span className="text-black bg-white mx-1 p-2 rounded-2xl">Personalized Video</span>
-                                <span className="text-black bg-white mx-1 mt-2 p-2 rounded-2xl">Marketing</span>
+                        <div className="bg-gray-200 lg:w-96 lg:h-56 h-72  rounded-b-xl">
+                            <div className="pt-7 ml-3 lg:ml-0 text-center flex flex-wrap lg:flex-nowrap justify-start lg:justify-center">
+                                <span className="text-black bg-white mx-1 py-2 px-3 rounded-3xl">Agency</span>
+                                <span className="text-black bg-white mx-1 py-2 px-3 rounded-3xl">Personalized Video</span>
+                                <span className="text-black bg-white mx-1 py-2 px-3 mt-2 lg:mt-0 rounded-3xl">Marketing</span>
                             </div>
                             <p className="mt-6 mx-4 text-lg text-left mb-6">How Ogilvy used HeyGen to get Gen Z to talk about their emotions</p>
 
@@ -42,11 +42,11 @@ const Section9 = () => {
                     </div>
                     <div>
                         <img className="w-96 h-48 rounded-t-xl" src="https://cdn.prod.website-files.com/66fe8021b25e3d52866115cd/6712e094dee11753c28aee1b_World%20Economic%20Forum%20Featured%20Image-p-500.png" alt="image1" />
-                        <div className="bg-gray-200 lg:w-96 lg:h-56 h-72 rounded-b-xl">
-                            <div className="pt-7 flex flex-wrap ml-2 lg:ml-0 justify-start text-center">
-                                <span className="text-black bg-white mx-1 p-2 rounded-2xl">Agency</span>
-                                <span className="text-black bg-white mx-1 p-2 rounded-2xl">Personalized Video</span>
-                                <span className="text-black bg-white mx-1 mt-2 p-2 rounded-2xl">Marketing</span>
+                        <div className="bg-gray-200 lg:w-96 lg:h-56 h-72  rounded-b-xl">
+                            <div className="pt-7 ml-3 lg:ml-0 text-center flex flex-wrap lg:flex-nowrap justify-start lg:justify-center">
+                                <span className="text-black bg-white mx-1 py-2 px-3 rounded-3xl">Agency</span>
+                                <span className="text-black bg-white mx-1 py-2 px-3 rounded-3xl">Personalized Video</span>
+                                <span className="text-black bg-white mx-1 py-2 px-3 mt-2 lg:mt-0 rounded-3xl">Marketing</span>
                             </div>
                             <p className="mt-6 mx-4 text-lg text-left mb-6">How Ogilvy used HeyGen to get Gen Z to talk about their emotions</p>
 
