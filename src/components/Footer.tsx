@@ -18,7 +18,7 @@ export default function Footer() {
                 </div>
 
                 <div className="container px-4 mx-auto">
-                    <div className="grid grid-cols-1 gap-36 md:grid-cols-2 lg:grid-cols-4">
+                    <div className="grid grid-cols-1 gap-x-36 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
                         {/* Pricing Column */}
                         <div className="space-y-4">
                             <h3 className="text-purple-600 font-medium">Pricing</h3>
@@ -126,7 +126,7 @@ export default function Footer() {
                         90094
                     </p>
                 </div>
-                <div className="flex flex-row lg:mx-24 mb-2 gap-3">
+                <div className="flex flex-row lg:mx-24 mt-5 gap-3">
 
                     <Image src="/images/image2.avif" alt={"image2"} width={70}
                         height={20} />
@@ -134,7 +134,7 @@ export default function Footer() {
                         height={20} />
 
                 </div>
-                <div className="flex flex:row gap-3 ">
+                <div className="flex flex:row gap-3 mt-5">
                     <Link href="https://www.linkedin.com/company/heygen/?viewAsMember=true">
                         <img src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be/66acbd9051fee2df87e82563_linkedin.avif" alt="linkedin" width="20px"/>
                     </Link>
@@ -149,4 +149,3 @@ export default function Footer() {
         </footer>
     )
 }
-
