@@ -87,7 +87,7 @@ const Section1: React.FC = () => {
                     </motion.video>
                     <button
                         onClick={toggleMute}
-                        className="px-4 py-2 absolute top-14 left-24 bg-white text-white font-bold rounded-lg shadow focus:outline-none focus:ring focus:ring-transparent"
+                        className="px-4 py-2 absolute top-10 left-14 lg:top-14 lg:left-24 bg-white text-white font-bold rounded-lg shadow focus:outline-none focus:ring focus:ring-transparent"
                     >
                         {isMuted ? <IoVolumeMute className="text-black" /> : <GoUnmute className="text-black" />}
                     </button>

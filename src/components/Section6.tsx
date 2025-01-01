@@ -45,7 +45,7 @@ const Section6 = () => {
                     </video>
                     <button
                         onClick={toggleMute}
-                        className="px-4 py-2 absolute top-14 left-32 bg-white text-white font-bold rounded-lg shadow focus:outline-none focus:ring focus:ring-transparent"
+                        className="px-4 py-2 absolute top-10 left-16 lg:top-14 lg:left-32 bg-white text-white font-bold rounded-lg shadow focus:outline-none focus:ring focus:ring-transparent"
                     >
                         {isMuted ? (
                             <IoVolumeMute className="text-black" />
