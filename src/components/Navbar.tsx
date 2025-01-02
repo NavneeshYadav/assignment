@@ -90,7 +90,7 @@ const Navbar: React.FC = () => {
                     {/* Mobile and Desktop Menus */}
                     <div className="flex lg:flex-row">
                         <ul
-                            className={`lg:flex lg:flex-row gap-4 lg:gap-8 lg:items-center lg:static lg:bg-transparent w-full lg:w-auto ${isOpen ? "block bg-white flex-col mt-10 absolute left-0 top-20 p-4 z-40 shadow-lg h-[500px] overflow-y-auto" : "hidden lg:flex"
+                            className={`lg:flex lg:flex-row gap-4 lg:gap-8 lg:items-center lg:static lg:bg-transparent w-full lg:w-auto ${isOpen ? `block bg-white flex-col mt-10 absolute left-0 ${isVisible}?:"top-20":"top-12" p-4 z-40 shadow-lg h-[500px] overflow-y-auto` : "hidden lg:flex"
                                 }`}
                         >
                             {menuItems.map((item, index) => (
