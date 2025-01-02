@@ -122,18 +122,20 @@ const Section1: React.FC = () => {
                 </div>
 
                 <motion.div
-                    className="text-center flex flex-row gap-2 justify-center mt-3"
+                    className="text-center flex flex-col lg:flex-row gap-2 justify-center mt-3"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 1.4 }}
                 >
-                    <p>Trusted by over 45,000 customers</p> |{" "}
-                    <img
-                        className="size-6"
-                        src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be/66f199f848e447ac8da0de24_Frame.webp"
-                        alt=""
-                    />
-                    <p>Rated 4.8/5 on G2</p>
+                    <p>Trusted by over 45,000 customers |</p>
+                    <div className="flex justify-center items-center gap-1">
+                        <img
+                            className="size-6"
+                            src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be/66f199f848e447ac8da0de24_Frame.webp"
+                            alt=""
+                        />
+                        <p>Rated 4.8/5 on G2</p>
+                    </div>
                 </motion.div>
             </motion.div>
         </motion.section>
