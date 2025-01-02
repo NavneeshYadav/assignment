@@ -51,7 +51,8 @@ const Navbar: React.FC = () => {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsSmallScreen(window.innerWidth < 1024); // Tailwind's `sm` breakpoint is 640px
+            setIsSmallScreen(window.innerWidth < 1024); 
+            setIsOpen(false);// Tailwind's `sm` breakpoint is 640px
         };
 
         // Check on initial render and add event listener
