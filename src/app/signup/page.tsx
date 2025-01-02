@@ -1,20 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa6";
-import { BsFillSuitcaseLgFill } from "react-icons/bs";
-import { AiOutlineEye, AiOutlineEyeInvisible, AiOutlineLock, AiOutlineMail } from "react-icons/ai";
+import {  AiOutlineMail } from "react-icons/ai";
 import { IoVolumeMute } from "react-icons/io5";
 import { GoUnmute } from "react-icons/go";
 export default function LoginPage() {
-    const [passwordVisible, setPasswordVisible] = useState(false);
-
-    const togglePasswordVisibility = () => {
-        setPasswordVisible(!passwordVisible);
-    };
+    const [buttonDisabled, setButtonDisabled] = useState(false);
+    const [user, setUser] = useState({
+        email: ""
+    })
     const videoRef = useRef<HTMLVideoElement | null>(null); // Reference to the video element
     const [isMuted, setIsMuted] = useState(true); // State to track mute status
 
@@ -24,6 +21,13 @@ export default function LoginPage() {
             setIsMuted(!isMuted); // Update state
         }
     };
+    useEffect(() => {
+        if (user.email.length > 0) {
+            setButtonDisabled(false);
+        } else {
+            setButtonDisabled(true);
+        }
+    }, [user]);
     return (
         <div className="flex flex-col-reverse lg:flex-row justify-center items-center min-h-screen">
             <div className="flex flex-col px-5 mx-2 mb-6 lg:px-20 pt-10 justify-center items-center bg-slate-200 bg-[url('https://app.heygen.com/assets/green_texture-c3f9ff03.png')] bg-cover bg-center lg:w-[800px] lg:h-[750px] rounded-2xl">
@@ -75,17 +79,24 @@ export default function LoginPage() {
                     <div className="relative mb-3">
                         <AiOutlineMail className="absolute left-3 top-3 text-gray-500" size={20} />
                         <input
+                            id="email"
                             type="email"
-                            placeholder="Email"
+                            value={user.email}
+                            onChange={(e) => setUser({ ...user, email: e.target.value })}
+                            placeholder="Name@work-email.com"
                             className="w-full pl-10 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-400"
                         />
                     </div>
 
-            
-
                     {/* Submit Button */}
-                    <button className="w-full bg-[#7559fd] text-white py-2 rounded-md hover:bg-blue-800 transition">
-                        Sign In
+                    <button
+                        disabled={buttonDisabled}
+                        className={`w-full py-2 rounded-md transition ${buttonDisabled
+                            ? "bg-purple-300 text-white cursor-not-allowed"
+                            : "bg-[#7559fd] text-white hover:bg-blue-800"
+                            }`}
+                    >
+                        Send Code
                     </button>
 
                     {/* Sign Up Link */}
@@ -106,8 +117,6 @@ export default function LoginPage() {
                     <div className="">
                         <button className="w-full rounded-lg p-2 border-2 mt-2 text-black  hover:bg-slate-100"><FcGoogle className="inline mr-1" /> Google</button>
                         <button className="w-full rounded-lg p-2 border-2 mt-2 text-black  hover:bg-slate-100"><FaApple className="inline mr-1" />Apple</button>
-                        <button className="w-full rounded-lg p-2 border-2 mt-2 text-black  hover:bg-slate-100"><FaFacebook className="inline mr-1" /> Facebook</button>
-                        <button className="w-full rounded-lg p-2 border-2 mt-2 text-black  hover:bg-slate-100"><BsFillSuitcaseLgFill className="inline mr-1" /> SSO</button>
                     </div>
                     <div className="text-gray-400">
                         <div className="mt-3 mb-8 text-base">
@@ -120,20 +129,7 @@ export default function LoginPage() {
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
         </div>
-
-
-
-
-
     )
 }
 
