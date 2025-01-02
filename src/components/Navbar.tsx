@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
 
             <nav className="bg-white z-30 text-black flex items-center lg:items-center h-20 lg:min-h-20">
                 <div className="leftside flex lg:flex-row lg:gap-10">
-                    <div className="ml-6 lg:ml-8">
+                    <div className="ml-6 lg:ml-8 my-auto">
                         <Link href="/" className="text-xl font-bold">
                             <img
                                 src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be/66e1a30a9a12f4c1d2bb3e9f_heygen-logotype.svg"
