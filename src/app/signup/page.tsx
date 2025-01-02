@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa6";
@@ -11,12 +11,7 @@ import { IoVolumeMute } from "react-icons/io5";
 import { GoUnmute } from "react-icons/go";
 export default function LoginPage() {
     const [passwordVisible, setPasswordVisible] = useState(false);
-    const [buttonDisabled, setButtonDisabled] = useState(false);
-    const [user, setUser] = useState({
-        email: "",
-        password: "",
 
-    })
     const togglePasswordVisibility = () => {
         setPasswordVisible(!passwordVisible);
     };
@@ -29,13 +24,6 @@ export default function LoginPage() {
             setIsMuted(!isMuted); // Update state
         }
     };
-    useEffect(() => {
-        if (user.email.length > 0 && user.password.length > 0) {
-            setButtonDisabled(false);
-        } else {
-            setButtonDisabled(true);
-        }
-    }, [user]);
     return (
         <div className="flex flex-col-reverse lg:flex-row justify-center items-center min-h-screen">
             <div className="flex flex-col px-5 mx-2 mb-6 lg:px-20 pt-10 justify-center items-center bg-slate-200 bg-[url('https://app.heygen.com/assets/green_texture-c3f9ff03.png')] bg-cover bg-center lg:w-[800px] lg:h-[750px] rounded-2xl">
@@ -87,50 +75,16 @@ export default function LoginPage() {
                     <div className="relative mb-3">
                         <AiOutlineMail className="absolute left-3 top-3 text-gray-500" size={20} />
                         <input
-                            id="email"
                             type="email"
-                            value={user.email}
-                            onChange={(e) => setUser({ ...user, email: e.target.value })}
-                            placeholder="Name@work-email.com"
+                            placeholder="Email"
                             className="w-full pl-10 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-400"
                         />
                     </div>
 
-                    {/* Password Input */}
-                    <div className="relative mb-1">
-                        <AiOutlineLock className="absolute left-3 top-3 text-gray-500" size={20} />
-                        <input
-                            id="password"
-                            value={user.password}
-                            onChange={(e) => setUser({ ...user, password: e.target.value })}
-                            type={passwordVisible ? "text" : "password"}
-                            placeholder="Enter Your Password"
-                            className="w-full pl-10 pr-10 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-400"
-                        />
-                        <button
-                            type="button"
-                            onClick={togglePasswordVisibility}
-                            className="absolute right-3 top-3 text-gray-500"
-                        >
-                            {passwordVisible ? <AiOutlineEye size={20} /> : <AiOutlineEyeInvisible size={20} />}
-                        </button>
-                    </div>
-
-                    {/* Forgot Password */}
-                    <div className="text-right mb-1">
-                        <a href="/forgot-password" className="text-sm text-gray-300  hover:text-blue-500 ">
-                            Forgot Password?
-                        </a>
-                    </div>
+            
 
                     {/* Submit Button */}
-                    <button
-                        disabled={buttonDisabled}
-                        className={`w-full py-2 rounded-md transition ${buttonDisabled
-                            ? "bg-purple-300 text-white cursor-not-allowed"
-                            : "bg-[#7559fd] text-white hover:bg-blue-800"
-                            }`}
-                    >
+                    <button className="w-full bg-[#7559fd] text-white py-2 rounded-md hover:bg-blue-800 transition">
                         Sign In
                     </button>
 
