@@ -145,7 +145,7 @@ const Navbar: React.FC = () => {
                             <div className="flex flex-col lg:hidden">
                                 <button className="text-left px-3 py-2 rounded-3xl">Contact Sales</button>
                                 <Link
-                                    href=""
+                                    href="/signup"
                                     className="bg-black ml-2 text-white mt-2 w-36 text-center rounded-3xl px-3 py-2"
                                 >
                                     Sign Up for free

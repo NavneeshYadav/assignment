@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
-import {  AiOutlineMail } from "react-icons/ai";
+import { AiOutlineMail } from "react-icons/ai";
 import { IoVolumeMute } from "react-icons/io5";
 import { GoUnmute } from "react-icons/go";
 export default function LoginPage() {
@@ -14,7 +14,7 @@ export default function LoginPage() {
     })
     const videoRef = useRef<HTMLVideoElement | null>(null); // Reference to the video element
     const [isMuted, setIsMuted] = useState(true); // State to track mute status
-
+    const [warning, setWarning] = useState(""); // State for the warning message
     const toggleMute = () => {
         if (videoRef.current) {
             videoRef.current.muted = !isMuted; // Toggle the muted property
@@ -28,6 +28,15 @@ export default function LoginPage() {
             setButtonDisabled(true);
         }
     }, [user]);
+    const handleSendCode = () => {
+        if (!user.email) {
+            setWarning("Email cannot be empty");
+        } else {
+            setWarning(""); // Clear the warning
+            // Proceed with sending code logic here
+            console.log("Code sent to:", user.email);
+        }
+    };
     return (
         <div className="flex flex-col-reverse lg:flex-row justify-center items-center min-h-screen">
             <div className="flex flex-col px-5 mx-2 mb-6 lg:px-20 pt-10 justify-center items-center bg-slate-200 bg-[url('https://app.heygen.com/assets/green_texture-c3f9ff03.png')] bg-cover bg-center lg:w-[800px] lg:h-[750px] rounded-2xl">
@@ -84,13 +93,15 @@ export default function LoginPage() {
                             value={user.email}
                             onChange={(e) => setUser({ ...user, email: e.target.value })}
                             placeholder="Name@work-email.com"
-                            className="w-full pl-10 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-400"
+                            className={`w-full pl-10 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 ${warning ? "border-red-500" : "focus:ring-purple-400"}`}
                         />
+                        {warning && <p className="text-red-500 text-sm mt-1">{warning}</p>}
                     </div>
 
                     {/* Submit Button */}
                     <button
-                        disabled={buttonDisabled}
+                        onClick={handleSendCode}
+                        // disabled={buttonDisabled}
                         className={`w-full py-2 rounded-md transition ${buttonDisabled
                             ? "bg-purple-300 text-white cursor-not-allowed"
                             : "bg-[#7559fd] text-white hover:bg-blue-800"
@@ -102,10 +113,10 @@ export default function LoginPage() {
                     {/* Sign Up Link */}
                     <div className="mt-4 text-center">
                         <p className="text-sm text-gray-600">
-                            Don't have an account?{" "}
-                            <a href="/signup" className="text-[#7559fd] hover:blue-800 underline">
-                                Sign up with email
-                            </a>
+                            Already have an account?{" "}
+                            <Link href="/login" className="text-[#7559fd] hover:blue-800 underline">
+                                Login
+                            </Link>
                         </p>
                     </div>
                     <div className="flex items-center justify-center my-4">

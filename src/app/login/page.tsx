@@ -138,9 +138,9 @@ export default function LoginPage() {
                     <div className="mt-4 text-center">
                         <p className="text-sm text-gray-600">
                             Don't have an account?{" "}
-                            <a href="/signup" className="text-[#7559fd] hover:blue-800 underline">
+                            <Link href="/signup" className="text-[#7559fd] hover:blue-800 underline">
                                 Sign up with email
-                            </a>
+                            </Link>
                         </p>
                     </div>
                     <div className="flex items-center justify-center my-4">
