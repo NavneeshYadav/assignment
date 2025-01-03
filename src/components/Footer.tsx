@@ -11,8 +11,8 @@ export default function Footer() {
                         <img src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be/66e1a30a9a12f4c1d2bb3e9f_heygen-logotype.svg" alt="internet connection issue" />
                     </Link>
                     <div className="w-40 mt-8 text-left">
-                        <button className="text-white bg-black ml-3 border px-3 py-2 rounded-3xl hover:bg-fuchsia-600">Sign up for free</button>
-                        <button className="text-black lg:block ml-3 bg-gray-300 mt-4 mb-3 px-3 py-2 rounded-3xl hover:bg-fuchsia-600">Login</button>
+                        <button className="text-white bg-black ml-3 border px-3 py-2 rounded-3xl hover:bg-fuchsia-600"><a href="/signup">Sign up for free</a></button>
+                        <button className="text-black lg:block ml-3 bg-gray-300 mt-4 mb-3 px-3 py-2 rounded-3xl hover:bg-fuchsia-600"><a href="/login">Login</a></button>
                     </div>
 
                 </div>

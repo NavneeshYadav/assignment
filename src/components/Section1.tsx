@@ -49,13 +49,13 @@ const Section1: React.FC = () => {
                 </motion.p>
 
                 <motion.div
-                    className="w-40 mt-4 text-center mx-auto"
+                    className="w-44 mt-4 text-center mx-auto"
                     initial={{ scale: 0.8, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.8 }}
                 >
                     <button className="text-white bg-black border px-3 py-2 rounded-3xl hover:bg-purple-800">
-                        Sign up for free
+                        <a href="/signup">Get Started for free</a>
                     </button>
                 </motion.div>
 

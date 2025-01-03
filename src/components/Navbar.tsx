@@ -174,7 +174,7 @@ const Navbar: React.FC = () => {
                                 </button>
                             )}
                             <button className="text-white mr-10 lg:mr-4 bg-black border px-3 py-2 rounded-3xl hover:bg-purple-800">
-                                Sign up for free
+                              <a href="/signup">Sign up for free</a>
                             </button>
                         </div>
 

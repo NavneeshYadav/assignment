@@ -57,7 +57,7 @@ const Section2 = () => {
                         transition={{ duration: 0.8, delay: 0.7 }}
                     >
                         <button className="text-white bg-black border px-3 py-2 rounded-3xl lg:block lg:min-w-full hover:bg-purple-800">
-                            Sign up for free
+                           <a href="/signup">Sign up for free</a>
                         </button>
                     </motion.div>
                 </motion.div>
